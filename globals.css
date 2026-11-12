@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: dark; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: #0b0b0e; color: #f5f7fb; font-family: 'DM Sans', sans-serif; }
+button, textarea { font: inherit; }
+::selection { background: rgba(0,240,255,.25); }
+.grid-bg { background-image: linear-gradient(rgba(0,240,255,.035) 1px, transparent 1px), linear-gradient(90deg, rgba(0,240,255,.035) 1px, transparent 1px); background-size: 54px 54px; mask-image: linear-gradient(to bottom, black, transparent 80%); }
+.glass { background: linear-gradient(145deg, rgba(255,255,255,.065), rgba(255,255,255,.018)); border: 1px solid rgba(255,255,255,.1); box-shadow: 0 20px 80px rgba(0,0,0,.28), inset 0 1px 0 rgba(255,255,255,.04); backdrop-filter: blur(18px); }
+.neon-border { border: 1px solid rgba(0,240,255,.28); box-shadow: 0 0 0 1px rgba(0,240,255,.04), 0 0 28px rgba(0,240,255,.07); }
+.gradient-text { background: linear-gradient(100deg,#f7ffff 8%,#00f0ff 52%,#b36cff 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.primary-btn { background: linear-gradient(105deg,#00d9ed,#7a39f4 85%); box-shadow: 0 8px 30px rgba(0,220,255,.2), 0 8px 35px rgba(157,0,255,.18); transition: transform .2s, filter .2s, box-shadow .2s; }
+.primary-btn:hover { transform: translateY(-2px); filter: brightness(1.12); box-shadow: 0 12px 38px rgba(0,220,255,.28); }
+.pill-active { color: #061014; background: linear-gradient(100deg,#00f0ff,#9d65ff); border-color: transparent; box-shadow: 0 0 24px rgba(0,240,255,.18); }
+.orb { position:absolute; border-radius:999px; filter:blur(70px); opacity:.18; pointer-events:none; animation: drift 12s ease-in-out infinite alternate; }
+.orb-two { animation-delay:-5s; }
+@keyframes drift { from { transform:translate3d(-15px,-10px,0) scale(.92) } to { transform:translate3d(35px,25px,0) scale(1.12) } }
+@keyframes pulse { 0%,100% { opacity:.45; transform:scale(.96) } 50% { opacity:1; transform:scale(1.04) } }
+@keyframes pop { from { opacity:0; transform:translateY(10px) } to { opacity:1; transform:translateY(0) } }
+.animate-pop { animation:pop .35s ease both; }
+.dot-pulse { animation:pulse 1.2s ease-in-out infinite; }
+textarea { resize:vertical; }
+::-webkit-scrollbar { width:8px } ::-webkit-scrollbar-thumb { background:#272733; border-radius:8px }
